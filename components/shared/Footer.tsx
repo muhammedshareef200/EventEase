@@ -11,7 +11,7 @@ const Footer = () => {
         alt="logo"
         width={128}
         height={38}/></Link>
-       <p>EventEase © 2023 All rights reserved</p>
+       <p>EventEase © 2024 All rights reserved</p>
      </div>
    
     </footer>
