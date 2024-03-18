@@ -2,14 +2,15 @@
 const nextConfig = {
     images: {
         domains: ['utfs.io'],
-        remotePatterns: [
+        remotePatterns : [
             {
                 protocol: 'https',
                 hostname: 'utfi.io',
-                port: ''
+                port:''
             }
         ]
     }
 }
 
-module.exports = nextConfig;
+
+module.exports = nextConfig
