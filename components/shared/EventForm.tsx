@@ -1,11 +1,11 @@
-"use client" 
+"use client"
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { eventformSchema } from "@/lib/validator"
+import { eventFormSchema } from "@/lib/validator"
 import * as z from 'zod'
 import { eventDefaultValues } from "@/constants"
 import Dropdown from "./Dropdown"
@@ -43,12 +43,12 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
 
   const { startUpload } = useUploadThing('imageUploader')
 
-  const form = useForm<z.infer<typeof eventformSchema>>({
-    resolver: zodResolver(eventformSchema),
+  const form = useForm<z.infer<typeof eventFormSchema>>({
+    resolver: zodResolver(eventFormSchema),
     defaultValues: initialValues
   })
  
-  async function onSubmit(values: z.infer<typeof eventformSchema>) {
+  async function onSubmit(values: z.infer<typeof eventFormSchema>) {
     let uploadedImageUrl = values.imageUrl;
 
     if(files.length > 0) {
@@ -260,8 +260,8 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
                   <FormControl>
                     <div className="flex-center h-[54px] w-full overflow-hidden rounded-full bg-grey-50 px-4 py-2">
                       <Image
-                        src="/assets/icons/rupee.svg"
-                        alt="rupee"
+                        src="/assets/icons/dollar.svg"
+                        alt="dollar"
                         width={24}
                         height={24}
                         className="filter-grey"
