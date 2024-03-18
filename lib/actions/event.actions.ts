@@ -68,6 +68,7 @@ export async function updateEvent({ userId, event, path }: UpdateEventParams) {
     if (!eventToUpdate || eventToUpdate.organizer.toHexString() !== userId) {
       throw new Error('Unauthorized or event not found')
     }
+    
 
     const updatedEvent = await Event.findByIdAndUpdate(
       event._id,
